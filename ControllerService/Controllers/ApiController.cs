@@ -61,7 +61,7 @@ namespace ControllerService.Controllers
         [HttpGet("download")]
         public ActionResult<String> Download(int taskId)
         {
-            var result = _downloadResultService.Download(_uploadService.getPath(taskId), _channel);
+            var result = _downloadResultService.Download(_uploadService.getPath(taskId), _channel, taskId);
             return result;
         }
     }

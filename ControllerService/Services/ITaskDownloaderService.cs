@@ -6,6 +6,6 @@ namespace ControllerService.Services
 {
     public interface ITaskDownloaderService
     {
-        string Download(string imagePath, IModel channel);
+        string Download(string imagePath, IModel channel, int taskId);
     }
 }

@@ -6,7 +6,7 @@ namespace ControllerService.Services
 {
     public class TaskDownloaderService : ITaskDownloaderService
     {
-        public String Download(String imagePath, IModel channel)
+        public string Download(string imagePath, IModel channel, int taskId)
         {
             TaskStatusService statusService = new TaskStatusService();
 
@@ -16,8 +16,9 @@ namespace ControllerService.Services
             {
                 return "failure";
             }
-            
-            
+
+            return "";
+            // TODO: прочитать результат с файла названием {taskId}.txt и вернуть его
         }
     }
 }
