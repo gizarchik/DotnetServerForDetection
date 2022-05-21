@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using RabbitMQ.Client;
 
@@ -6,7 +8,7 @@ namespace ControllerService.Services
 {
     public class TaskDownloaderService : ITaskDownloaderService
     {
-        public String Download(String imagePath, IModel channel)
+        public string Download(string imagePath, IModel channel, int taskId)
         {
             TaskStatusService statusService = new TaskStatusService();
 
@@ -16,8 +18,9 @@ namespace ControllerService.Services
             {
                 return "failure";
             }
-            
-            
+
+            String content = File.ReadAllText("Result/" + taskId + ".txt");
+            return content;
         }
     }
 }
