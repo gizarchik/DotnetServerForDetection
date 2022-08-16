@@ -1,6 +1,6 @@
 # DotnetServerImageClassification
 
-.Net сервер для классификации картинок. Модель для распознавания - **inception_v3**.
+ASP.NET сервер для классификации картинок. Модель для распознавания - **inception_v3**.
 
 Стек технологий: ASP.NET, RabbitMQ, Redis, Pytorch
 
